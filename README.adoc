@@ -8,7 +8,7 @@ Original sources from Jan available here: https://github.com/jdolinay/Arduino_DI
 
 For more information about this library please visit us at
 http://www.locoduino.org/spip.php?article165 in french or
-http://git.framasoft.org/locoduino.org/ArduinoDIO2/wikis/home for both french and english.
+http://git.framasoft.org/locoduino.org/DIO2/wikis/home for both french and english.
 
 == License ==
 

@@ -144,6 +144,17 @@ uint8_t digitalPinToInterrupt(uint8_t)
 	return 0;
 }
 
+uint16_t makeWord(uint16_t w)
+{
+	return w;
+}
+
+uint16_t makeWord(byte h, byte l)
+{
+	return (h << (uint16_t)8) + l;
+}
+
+
 //////////////////////////////////////////
 // Memory
 

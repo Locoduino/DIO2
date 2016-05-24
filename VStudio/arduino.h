@@ -59,6 +59,28 @@ void attachInterrupt(uint8_t, void(*)(void), int mode);
 void detachInterrupt(uint8_t);
 uint8_t digitalPinToInterrupt(uint8_t);
 
+#define lowByte(w) ((uint8_t) ((w) & 0xff))
+#define highByte(w) ((uint8_t) ((w) >> 8))
+
+uint16_t makeWord(uint16_t w);
+uint16_t makeWord(byte h, byte l);
+
+#define word(...) makeWord(__VA_ARGS__)
+
+#define bitRead(value, bit) (((value) >> (bit)) & 0x01)
+#define bitSet(value, bit) ((value) |= (1UL << (bit)))
+#define bitClear(value, bit) ((value) &= ~(1UL << (bit)))
+#define bitWrite(value, bit, bitvalue) (bitvalue ? bitSet(value, bit) : bitClear(value, bit))
+
+// avr-libc defines _NOP() since 1.6.2
+#ifndef _NOP
+#define _NOP() do { __asm__ volatile ("nop"); } while (0)
+#endif
+
+typedef unsigned int word;
+
+#define bit(b) (1UL << (b))
+
 int freeMemory();
 
 //-------------------------------------------------------------------

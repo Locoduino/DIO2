@@ -24,23 +24,23 @@
 #ifndef ARDUINO2_H_
 #define ARDUINO2_H_
 
-#ifdef _LIB_SAM_
+#ifdef ARDUINO_ARCH_SAM
+
 // DUE version
 // The due is probably fast enough to access ports very efficiency (and i dont know how to make better !) .
 // So the functions are dummies, and conduct to original Arduino functions...
 
 typedef int GPIO_pin_t;
-static inline void pinMode2(uint8_t pin, uint8_t mode) { pinMode(pin, mode); }
-static inline void digitalWrite2(uint8_t pin, uint8_t value) { digitalWrite(pin, value); }
-static inline uint8_t digitalRead2(uint8_t pin) { return digitalRead(pin); }
+#define pinMode2(P, M)			pinMode(P, M)
+#define digitalWrite2(P, V)		digitalWrite(P, V)
+#define digitalRead2(P)			digitalRead(P)
 
-// New version of functions which take pin code (GPIO_pin_t) as input parameter
-static inline void pinMode2f(GPIO_pin_t pin, uint8_t mode ) { pinMode(pin, mode); }
-static inline uint8_t digitalRead2f(GPIO_pin_t pin) { return digitalRead(pin); }
-static inline void digitalWrite2f(GPIO_pin_t pin, uint8_t value)  { digitalWrite(pin, value); }
+#define pinMode2f(P, M)			pinMode(P, M)
+#define digitalWrite2f(P, V)	digitalWrite(P, V)
+#define digitalRead2f(P)		digitalRead(P)
 
-static inline GPIO_pin_t Arduino_to_GPIO_pin(uint8_t pin) { return pin; }
-static inline int GPIO_to_Arduino_pin(GPIO_pin_t inPin) { return inPin; }
+#define Arduino_to_GPIO_pin(P)	(P)
+#define GPIO_to_Arduino_pin(P)	(P)
 
 #define DP_INVALID	0xFFFF
 #define DP0	0
@@ -51,6 +51,15 @@ static inline int GPIO_to_Arduino_pin(GPIO_pin_t inPin) { return inPin; }
 #define DP5	5
 #define DP6	6
 #define DP7	7
+
+#include "Arduino.h"
+
+#ifdef F
+#undef F
+#endif
+
+#define F(str)	str
+#define __FlashStringHelper		char
 
 #else
 

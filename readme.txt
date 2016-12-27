@@ -7,6 +7,12 @@ Works also for Nano R3, Leonardo and Due (only for compatibility).
 
 Revision History
 ----------------
+December 2016 - Version 1.3
+Add good definitions for analog pins for Mega.
+
+September 2016 - Version 1.2
+DUE compatibility added. In fact, just redirect the DIO functions to classic Arduino functions...
+
 April 2016 - Version 1.1
 Arduino Nano and Leonardo added. Due has been added also, but only for compatibility, 
 no improvementf or that kind of Arduino.

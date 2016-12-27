@@ -207,6 +207,14 @@ enum GPIO_pin_enum
 
 };
 
+#define DPA0	DP54
+#define DPA1	DP55
+#define DPA2	DP56
+#define DPA3	DP57
+#define DPA4	DP58
+#define DPA5	DP59
+#define DPA6	DP60
+#define DPA7	DP61
 #define DPA8	DP62
 #define DPA9	DP63
 #define DPA10	DP64
@@ -216,6 +224,14 @@ enum GPIO_pin_enum
 #define DPA14	DP68
 #define DPA15	DP69
 
+#define A0		54
+#define A1		55
+#define A2		56
+#define A3		57
+#define A4		58
+#define A5		59
+#define A6		60
+#define A7		61
 #define A8		62
 #define A9		63
 #define A10		64

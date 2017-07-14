@@ -6,7 +6,7 @@
  *
  *  Alternate version of digital input/output for Arduino.
  *  This is dummy file which can be used for Arduino variants which are not
- *  supported by this library to allow building without errors.
+ *  supported by this library to allow building and executing without errors.
  *
  *
   This is free software; you can redistribute it and/or

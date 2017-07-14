@@ -44,6 +44,10 @@
 #ifndef ADRUINO_PINS2_H_
 #define ADRUINO_PINS2_H_
 
+// ===========================================================================
+// Warning : on a Nano R3, two more pins ar availables, marked as A6 and A7.
+// These pin are ANALOG ONLY ! So they are not used and defined here !
+// ===========================================================================
 
 // ===========================================================================
 // Configuration
@@ -101,9 +105,10 @@
 enum GPIO_pin_enum
 {
 	// Note: The invalid value can be 0 which means digitalWrite will write to
-    // reserved address on Atmega 328 used in Arduino Uno,
+	// reserved address on Atmega 328 used in Arduino Uno,
 	// or it can be any valid port register - as long as the bit mask in upper 
-    // byte is 0, the operation on this register will have no effect.
+	// byte is 0, the operation on this register will have no effect.
+
 	DP_INVALID = 0x0025,
 	DP0 = GPIO_MAKE_PINCODE(MYPORTD,0),
 	DP1 = GPIO_MAKE_PINCODE(MYPORTD,1),
@@ -179,6 +184,14 @@ enum GPIO_pin_t
 #define   GPIO_PORT_REG(pin)    (*(volatile uint8_t*)GET_PORT_REG_ADR(pin) )
 #define   GPIO_DDR_REG(pin)    (*(volatile uint8_t*)GET_DDR_REG_ADR(pin) )
 
+#define A0		14
+#define A1		15
+#define A2		16
+#define A3		17
+#define A4		18
+#define A5		19
+#define A6		20
+#define A7		21
 
 // ARDUINO2_MAIN should be defined only once in the program so that the
 // gpio_pins_progmem is not duplicated. This is done in digital2.c

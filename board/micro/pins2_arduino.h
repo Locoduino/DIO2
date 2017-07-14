@@ -43,6 +43,10 @@
 #ifndef ADRUINO_PINS2_H_
 #define ADRUINO_PINS2_H_
 
+// ===========================================================================
+// Warning : on a Pro Mini, two more pins ar availables, marked as A6 and A7.
+// These pin are ANALOG ONLY ! So they are not used and defined here !
+// ===========================================================================
 
 // ===========================================================================
 // Configuration

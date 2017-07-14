@@ -145,6 +145,13 @@ typedef	enum GPIO_pin_enum  GPIO_pin_t;
 #define   GPIO_DDR_REG(pin)    (*(volatile uint8_t*)GET_DDR_REG_ADR(pin) )
 
 
+#define A0		14
+#define A1		15
+#define A2		16
+#define A3		17
+#define A4		18
+#define A5		19
+
 // ARDUINO2_MAIN should be defined only once in the program so that the
 // gpio_pins_progmem is not duplicated. This is done in digital2.c
 #ifdef ARDUINO2_MAIN

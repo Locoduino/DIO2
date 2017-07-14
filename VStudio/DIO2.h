@@ -5,7 +5,7 @@
 
 #include "arduino.h"
 
-#include "../board/mega/pins2_arduino.h"
+#include "../board/nano/pins2_arduino.h"
 
 #define pinMode2(pin, mode)			ArduiEmulator::Arduino::_pinMode(DIO2::DioClass::_GPIO_to_Arduino_pin(pin), mode)
 #define digitalWrite2(pin, val)		ArduiEmulator::Arduino::_digitalWrite(DIO2::DioClass::_GPIO_to_Arduino_pin(pin), val);

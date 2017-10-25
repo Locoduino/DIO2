@@ -14,7 +14,7 @@ http://git.framasoft.org/locoduino.org/DIO2/wikis/home for both french and engli
 
 Copyright (c) Jan Dolinay, All right reserved.
 Copyright (c) 2016 Locoduino.org. All right reserved.
-Copyright (c) 2016 Thierry Paris.  All right reserved.
+Copyright (c) 2016 Thierry Paris. All right reserved.
 
 This library is free software; you can redistribute it and/or
 modify it under the terms of the GNU Lesser General Public

@@ -7,6 +7,9 @@ Works also for Nano R3, Leonardo and Due (only for compatibility).
 
 Revision History
 ----------------
+July 2018 - Version 1.4.1
+Fix Keywords.txt format.
+
 July 2017 - Version 1.4
 Add new samples for Arduino Leonardo and Arduino Micro
 Add analog pins declaration for Uno and Nano .

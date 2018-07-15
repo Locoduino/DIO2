@@ -3,7 +3,7 @@
 #define DIO2_H_
 //-------------------------------------------------------------------
 
-#include "arduino.h"
+#include "Arduino.h"
 
 #include "../board/mega/pins2_arduino.h"
 

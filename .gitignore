@@ -2,3 +2,5 @@ VStudio/Debug
 .suo
 VStudio/x64/
 *.log
+
+desktop\.ini

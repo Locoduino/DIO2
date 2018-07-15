@@ -25,7 +25,7 @@
 
 #include "Arduino.h"
 
-#ifndef _LIB_SAM_
+#if !defined(_LIB_SAM_) && !defined(ARDUINO_ARCH_ESP32)
 
 // Standard headers for AVR
 #include <avr/pgmspace.h>

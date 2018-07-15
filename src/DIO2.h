@@ -24,7 +24,7 @@
 #ifndef ARDUINO2_H_
 #define ARDUINO2_H_
 
-#ifdef ARDUINO_ARCH_SAM
+#if defined(ARDUINO_ARCH_SAM) || defined(ARDUINO_ARCH_ESP32)
 
 // DUE version
 // The due is probably fast enough to access ports very efficiency (and i dont know how to make better !) .

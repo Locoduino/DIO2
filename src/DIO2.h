@@ -24,44 +24,7 @@
 #ifndef ARDUINO2_H_
 #define ARDUINO2_H_
 
-#if defined(ARDUINO_ARCH_SAM) || defined(ARDUINO_ARCH_ESP32)
-
-// DUE version
-// The due is probably fast enough to access ports very efficiency (and i dont know how to make better !) .
-// So the functions are dummies, and conduct to original Arduino functions...
-
-typedef int GPIO_pin_t;
-#define pinMode2(P, M)			pinMode(P, M)
-#define digitalWrite2(P, V)		digitalWrite(P, V)
-#define digitalRead2(P)			digitalRead(P)
-
-#define pinMode2f(P, M)			pinMode(P, M)
-#define digitalWrite2f(P, V)	digitalWrite(P, V)
-#define digitalRead2f(P)		digitalRead(P)
-
-#define Arduino_to_GPIO_pin(P)	(P)
-#define GPIO_to_Arduino_pin(P)	(P)
-
-#define DP_INVALID	0xFFFF
-#define DP0	0
-#define DP1	1
-#define DP2	2
-#define DP3	3
-#define DP4	4
-#define DP5	5
-#define DP6	6
-#define DP7	7
-
-#include "Arduino.h"
-
-#ifdef F
-#undef F
-#endif
-
-#define F(str)	str
-#define __FlashStringHelper		char
-
-#else
+#if defined(ARDUINO_ARCH_AVR)
 
 // Standard headers for AVR
 #include <avr/pgmspace.h>
@@ -427,5 +390,43 @@ int GPIO_to_Arduino_pin(GPIO_pin_t inPin);
 #ifdef __cplusplus
 } // extern "C"
 #endif
+
+#else
+
+// ARM / ESP / STM versions
+// These procs are probably fast enough to access ports very efficiency (and i dont know how to make better !) .
+// So the functions are dummies, and conduct to original wiring functions...
+
+typedef int GPIO_pin_t;
+#define pinMode2(P, M)			pinMode(P, M)
+#define digitalWrite2(P, V)		digitalWrite(P, V)
+#define digitalRead2(P)			digitalRead(P)
+
+#define pinMode2f(P, M)			pinMode(P, M)
+#define digitalWrite2f(P, V)	digitalWrite(P, V)
+#define digitalRead2f(P)		digitalRead(P)
+
+#define Arduino_to_GPIO_pin(P)	(P)
+#define GPIO_to_Arduino_pin(P)	(P)
+
+#define DP_INVALID	0xFFFF
+#define DP0	0
+#define DP1	1
+#define DP2	2
+#define DP3	3
+#define DP4	4
+#define DP5	5
+#define DP6	6
+#define DP7	7
+
+#include "Arduino.h"
+
+#ifdef F
+#undef F
+#endif
+
+#define F(str)	str
+#define __FlashStringHelper		char
+
 #endif
 #endif /* DIO2_H_ */

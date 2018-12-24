@@ -7,6 +7,9 @@ Works also for Nano R3, Leonardo and Due (only for compatibility).
 
 Revision History
 ----------------
+December 2018 - Version 1.5.0
+Add support for non AVR architectures.
+
 July 2018 - Version 1.4.1
 Fix Keywords.txt format.
 

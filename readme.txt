@@ -1,5 +1,5 @@
 Fast digital I/O functions for Arduino.
-Created by Jan Dolinay, Feb. 2014
+Created by Jan Dolinay, Feb. 2014 [https://www.codeproject.com/Articles/732646/Fast-digital-I-O-for-Arduino]
 Works for Arduino Uno and Arduino Mega
 
 Version 1.1 from Thierry Paris,
@@ -7,39 +7,42 @@ Works also for Nano R3, Leonardo and Due (only for compatibility).
 
 Revision History
 ----------------
+Mai 2019 - Version 1.5.1
+- Change Visual Studio project to be conform to ArduiEmulator 2.0.0
+
 December 2018 - Version 1.5.0
-Add support for non AVR architectures.
+- Add support (just a bypass...) for non AVR architectures.
 
 July 2018 - Version 1.4.1
-Fix Keywords.txt format.
+- Fix Keywords.txt format.
 
 July 2017 - Version 1.4
-Add new samples for Arduino Leonardo and Arduino Micro
-Add analog pins declaration for Uno and Nano .
+- Add new samples for Arduino Leonardo and Arduino Micro
+- Add analog pins declaration for Uno and Nano .
 
 December 2016 - Version 1.3
-Add good definitions for analog pins for Mega.
+- Add good definitions for analog pins for Mega.
 
 September 2016 - Version 1.2
-DUE compatibility added. In fact, just redirect the DIO functions to classic Arduino functions...
+- DUE compatibility added. In fact, just redirect the DIO functions to classic Arduino functions...
 
 April 2016 - Version 1.1
-Arduino Nano and Leonardo added. Due has been added also, but only for compatibility, 
+- Arduino Nano and Leonardo added. Due has been added also, but only for compatibility, 
 no improvementf or that kind of Arduino.
-No more file copy necessary at library installation. The compilation will choose the 
+- No more file copy necessary at library installation. The compilation will choose the 
 right include file according to the Arduino IDE flags.
-A new function GPIO_to_Arduino_pin has been added to transform a GPIO_pin_t into a
+- A new function GPIO_to_Arduino_pin has been added to transform a GPIO_pin_t into a
 classic pin number in integer type.
 
 March 2015 - Version 1.0
-Directory structure changed so that this package can be installed as Arduino library.
+- Directory structure changed so that this package can be installed as an Arduino library.
 
 February 2014 - First release.
 
 
 Contents of this package:
 -------------------------
-board - files with pin definitios for supported boards (Uno and Mega). This need to be copied to
+board - files with pin definitions for supported boards (Uno and Mega). This need to be copied to
 	appropriate location in your Arduino installation! (see instructions below).
 examples - example sketches for Arduino Uno and Mega to test the new digital I/O.
 src - source code of the library

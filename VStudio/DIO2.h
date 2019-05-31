@@ -3,20 +3,23 @@
 #define DIO2_H_
 //-------------------------------------------------------------------
 
+#include "stdafx.h"
+
 #include "Arduino.h"
+//#include "ArduiEmulator.hpp"
 
 #include "../board/mega/pins2_arduino.h"
 
-#define pinMode2(pin, mode)			ArduiEmulator::Arduino::_pinMode(DIO2::DioClass::_GPIO_to_Arduino_pin(pin), mode)
-#define digitalWrite2(pin, val)		ArduiEmulator::Arduino::_digitalWrite(DIO2::DioClass::_GPIO_to_Arduino_pin(pin), val);
-#define digitalRead2(pin)			ArduiEmulator::Arduino::_digitalRead(DIO2::DioClass::_GPIO_to_Arduino_pin(pin));
+extern void pinMode2(uint8_t pin, uint8_t mode);
+extern void digitalWrite2(uint8_t pin, uint8_t val);
+extern uint8_t digitalRead2(uint8_t pin);
 
-#define pinMode2f(pin, mode)		ArduiEmulator::Arduino::_pinMode(DIO2::DioClass::_GPIO_to_Arduino_pin(pin), mode);
-#define digitalWrite2f(pin, value)	ArduiEmulator::Arduino::_digitalWrite(DIO2::DioClass::_GPIO_to_Arduino_pin(pin), value)
-#define digitalRead2f(pin)			ArduiEmulator::Arduino::_digitalRead(DIO2::DioClass::_GPIO_to_Arduino_pin(pin));
+extern void pinMode2f(GPIO_pin_t pin, uint8_t mode);
+extern uint8_t digitalRead2f(GPIO_pin_t pin);
+extern void digitalWrite2f(GPIO_pin_t pin, uint8_t value);
 
-#define GPIO_to_Arduino_pin(GPIO_PIN)		DIO2::DioClass::_GPIO_to_Arduino_pin(GPIO_PIN)
-#define Arduino_to_GPIO_pin(PIN)			DIO2::DioClass::_Arduino_to_GPIO_pin(PIN)
+extern GPIO_pin_t Arduino_to_GPIO_pin(int aa);
+extern int GPIO_to_Arduino_pin(GPIO_pin_t aa);
 
 //-------------------------------------------------------------------				
 #endif

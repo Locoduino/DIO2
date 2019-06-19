@@ -83,7 +83,7 @@ static inline void digitalWrite2f(GPIO_pin_t pin, uint8_t value);
 	#define		GPIO2_USE_INLINE_FUNCTIONS	0
 #endif
 
-// Note: ATOMIC_BLOCK is macro in AVR Libc, but it cannot be used in current Arduino verison
+// Note: ATOMIC_BLOCK is macro in AVR Libc, but it cannot be used in current Arduino version
 // (1.0.5-r2), because the compiler options are not set to support C99 standard.
 // That is why there is our own version for now
 #define	GPIO2_ATOMIC_BEGIN		{ uint8_t matom_oldSREG = SREG; cli();

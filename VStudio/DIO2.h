@@ -8,7 +8,23 @@
 #include "Arduino.h"
 //#include "ArduiEmulator.hpp"
 
+
+// Definitions specific for selected board
+#if defined(__AVR_ATmega2560__)
 #include "../board/mega/pins2_arduino.h"
+#else
+#if defined(__AVR_ATmega328P__)
+#include "../board/nano/pins2_arduino.h"
+#else
+#if defined(__AVR_ATmega32U4__)
+#include "../board/leonardo/pins2_arduino.h"
+#else
+#include "../board/standard/pins2_arduino.h"
+#endif
+#endif
+#endif
+
+//#include "../board/mega/pins2_arduino.h"
 
 extern void pinMode2(uint8_t pin, uint8_t mode);
 extern void digitalWrite2(uint8_t pin, uint8_t val);

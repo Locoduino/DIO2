@@ -393,7 +393,7 @@ int GPIO_to_Arduino_pin(GPIO_pin_t inPin);
 
 #else
 
-// ARM / ESP / STM versions
+// ARM / ESP / STM / DUE / RP2040 versions
 // These procs are probably fast enough to access ports very efficiency (and i dont know how to make better !) .
 // So the functions are dummies, and conduct to original wiring functions...
 

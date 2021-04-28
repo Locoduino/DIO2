@@ -5,6 +5,7 @@
 #include "DIO2.h"
 #include "ArduiEmulator.hpp"
 
+#ifdef ARDUINO_ARCH_AVR
 void pinMode2(uint8_t pin, uint8_t mode)
 {
 	pinMode(pin, mode);
@@ -51,3 +52,15 @@ GPIO_pin_t Arduino_to_GPIO_pin(int inPin)
 {
 	return gpio_pins_progmem[inPin];
 }
+#else
+int GPIO_to_Arduino_pin(GPIO_pin_t inPin)
+{
+	return inPin;
+}
+
+GPIO_pin_t Arduino_to_GPIO_pin(int inPin)
+{
+	return inPin;
+}
+
+#endif

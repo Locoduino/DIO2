@@ -7,14 +7,13 @@ Originaly written by Jan Dolinay, updated by Thierry Paris.
 Original sources from Jan available here: https://github.com/jdolinay/Arduino_DIO2 . Article here https://www.codeproject.com/Articles/732646/Fast-digital-I-O-for-Arduino
 
 For more information about this library please visit us at
-http://www.locoduino.org/spip.php?article165 in french or
-http://git.framasoft.org/locoduino.org/DIO2/wikis/home for both french and english.
+http://www.locoduino.org/spip.php?article165 in french
 
 == License ==
 
 Copyright (c) Jan Dolinay, All right reserved.
-Copyright (c) 2016-2019 Locoduino.org. All right reserved.
-Copyright (c) 2016-2019 Thierry Paris. All right reserved.
+Copyright (c) 2016-2021 Locoduino.org. All right reserved.
+Copyright (c) 2016-2021 Thierry Paris. All right reserved.
 
 This library is free software; you can redistribute it and/or
 modify it under the terms of the GNU Lesser General Public

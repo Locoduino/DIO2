@@ -2,11 +2,14 @@ Fast digital I/O functions for Arduino.
 Created by Jan Dolinay, Feb. 2014 [https://www.codeproject.com/Articles/732646/Fast-digital-I-O-for-Arduino]
 Works for Arduino Uno and Arduino Mega
 
-Version 1.1 from Thierry Paris,
-Works also for Nano R3, Leonardo and Due (only for compatibility).
+Version 1.x.y from Thierry Paris,
+Works also for Nano R3, Leonardo, and STM32, ESP32, rp2040 (Raspberry Pi Pico) and Due only for compatibility.
 
 Revision History
 ----------------
+Mai 2021 - Version 1.6.0
+- Add Raspberry Pi Pico support by a bypass.
+
 Mai 2019 - Version 1.5.1
 - Change Visual Studio project to be conform to ArduiEmulator 2.0.0
 

@@ -7,6 +7,10 @@ Works also for Nano R3, Leonardo, and STM32, ESP32, rp2040 (Raspberry Pi Pico) a
 
 Revision History
 ----------------
+
+Nov 2024 - Version 1.6.1
+- Remove extra code that breaks various builds. 
+
 Mai 2021 - Version 1.6.0
 - Add Raspberry Pi Pico support by a bypass.
 

@@ -421,12 +421,5 @@ typedef int GPIO_pin_t;
 
 #include "Arduino.h"
 
-#ifdef F
-#undef F
-#endif
-
-#define F(str)	str
-#define __FlashStringHelper		char
-
 #endif
 #endif /* DIO2_H_ */
